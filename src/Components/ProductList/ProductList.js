@@ -5,7 +5,7 @@ import ImageListItemBar from '@mui/material/ImageListItemBar';
 
 export default function TitlebarBelowImageList() {
   return (
-    <ImageList sx={{ width: 630, height: 500, border: '3px solid black', margin:'100px', padding:'150px' }} cols={3} gap={50} rowHeight={164}>
+    <ImageList sx={{ width: 630, height: 500, border: '3px solid black', margin: '100px', padding: '150px' }} cols={3} gap={50} rowHeight={164}>
       {itemData.map((item, index) => (
         <ImageListItem key={index}>
           <img
@@ -26,11 +26,13 @@ export default function TitlebarBelowImageList() {
 }
 const itemData = [
   {
+    id: 1,
     img: '/images/YeezyBlack.png',
     title: 'Adidas Yeezy Boost 350 V2',
     price: '$330.00',
   },
   {
+    id: 2,
     img: '/images/YeezySlides.png',
     title: 'Adidas Yeezy Slides',
     price: '$124.00',
