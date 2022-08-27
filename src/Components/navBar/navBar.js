@@ -11,10 +11,6 @@ import shoppingLogo from './shoppingLogoResize.png'
 
 
 
-const bgColor = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.primary.main,
-
-}));
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
     ...theme.typography.body2,
