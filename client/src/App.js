@@ -101,15 +101,7 @@ function App() {
                 path="/"
                 exact
                 element={ <ProductList/>
-                  // <Product
-                  //   image={""}
-                  //   seller={""}
-                  //   name={"Jordans"}
-                  //   description={""}
-                  //   _id={""}
-                  //   price={4}
-                  //   quantity={4}
-                  // />
+             
                 }
               />
             </Routes>
