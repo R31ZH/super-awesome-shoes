@@ -46,18 +46,28 @@ function ProductItem(item) {
 
   return (
     <div className="card px-1 py-1">
+<<<<<<< HEAD
       <Link to={`/product/${_id}`}>
         <img
+=======
+      <Link to={`/products/${_id}`}>
+        {/* <img
+>>>>>>> 54f38112d06673b9055cc7df974cd288bf9bb9a6
           alt={name}
           src={`/images/${image}`}
         />
-        <p>{name}</p>
+        <p>{name}</p> */}
       </Link>
       <div>
+<<<<<<< HEAD
         <div> {seller}{description}{quantity}{pluralize("item", quantity)} in stock </div>
         <span>${price}</span>
+=======
+        {/* <div> {seller}{description}{quantity}{pluralize("item", quantity)} </div>
+        <span>${price}</span> */}
+>>>>>>> 54f38112d06673b9055cc7df974cd288bf9bb9a6
       </div>
-      <button onClick={addToCart}>Add to cart</button>
+      {/* <button onClick={addToCart}>Add to cart</button> */}
     </div>
   );
 }

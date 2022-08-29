@@ -62,23 +62,31 @@ const client = new ApolloClient({
 function App() {
   return (
     <Router>
+
          <ApolloProvider client={client}>
         <Login />
+
+      <ApolloProvider client={client}>
+            <Nav />
+            <Login />
+
         <StoreProvider>
           <ThemeProvider theme={theme}>
-            <Nav />
             <Product
               image={""}
               seller={""}
-              name={"Jordans"}
+              name={""}
               description={""}
               _id={""}
               price={4}
               quantity={4}
             />
             <ShoppingCart />
+
             <ProductList />
+
           </ThemeProvider>
+          <ProductList />
         </StoreProvider>
       </ApolloProvider>
     </Router>

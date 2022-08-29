@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../../utils/mutations";
 
@@ -41,53 +41,57 @@ const Login = (props) => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Login</h4>
-          <div className="card-body">
-            {data ? (
-              <p>
-                Success! You may now head{" "}
-                <Link to="/">back to the homepage.</Link>
-              </p>
-            ) : (
-              <form onSubmit={handleFormSubmit}>
-                <input
-                  className="form-input"
-                  placeholder="Your email"
-                  name="email"
-                  type="email"
-                  value={formState.email}
-                  onChange={handleChange}
-                />
-                <input
-                  className="form-input"
-                  placeholder="******"
-                  name="password"
-                  type="password"
-                  value={formState.password}
-                  onChange={handleChange}
-                />
-                <button
-                  className="btn btn-block btn-primary"
-                  style={{ cursor: "pointer" }}
-                  type="submit"
-                >
-                  Submit
-                </button>
-              </form>
-            )}
+    <div>
+    {/* <button>Login</button>
+    <button>SignUp</button> */}
+    </div>
+    // <main className="flex-row justify-center mb-4">
+    //   <div className="col-12 col-lg-10">
+    //     <div className="card">
+    //       <h4 className="card-header bg-dark text-light p-2" style={{ fontSize: "25px" }}>Login</h4>
+    //       <div className="card-body">
+    //         {data ? (
+    //           <p>
+    //             Success! You may now head{" "}
+    //             <Link to="/">back to the homepage.</Link>
+    //           </p>
+    //         ) : (
+    //           <form onSubmit={handleFormSubmit}>
+    //             <input
+    //               className="form-input"
+    //               placeholder="Insert Email"
+    //               name="email"
+    //               type="email"
+    //               value={formState.email}
+    //               onChange={handleChange}
+    //               style={{ height: '30px', width: '200px', borderRadius: '5px', borderColor: 'black'}} />
+    //             <input
+    //               className="form-input"
+    //               placeholder="Insert Password"
+    //               name="password"
+    //               type="password"
+    //               value={formState.password}
+    //               onChange={handleChange}
+    //               style={{ height: '30px', width: '200px', borderRadius: '5px', borderColor: 'black'}}
+    //             />
+    //             <button
+    //               className="btn btn-block btn-primary"
+    //               style={{ cursor: "pointer", height: '36px', width: '120px', backgroundColor: 'black', borderRadius: '5px', color:'white'}}
+    //               type="submit">
+    //               Submit
+    //             </button>
+    //           </form>
+    //         )}
 
-            {error && (
-              <div className="my-3 p-3 bg-danger text-white">
-                {error.message}
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
-    </main>
+    //         {error && (
+    //           <div className="my-3 p-3 bg-danger text-white">
+    //             {error.message}
+    //           </div>
+    //         )}
+    //       </div>
+    //     </div>
+    //   </div>
+    // </main>
   );
 };
 
