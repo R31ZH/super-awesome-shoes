@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { pluralize } from "../../utils/helpers"
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
@@ -8,17 +7,16 @@ import './style.css';
 
 
 
+
 function ProductItem(item) {
   const [state, dispatch] = useStoreContext();
 
   const {
-    image,
-    seller,
-    name,
-    description,
     _id,
+    title,
+    image,
     price,
-    quantity
+    category,
   } = item;
 
   // const { cart } = state
@@ -46,28 +44,33 @@ function ProductItem(item) {
 
   return (
     <div className="card px-1 py-1">
-<<<<<<< HEAD
+
       <Link to={`/product/${_id}`}>
         <img
-=======
-      <Link to={`/products/${_id}`}>
-        {/* <img
->>>>>>> 54f38112d06673b9055cc7df974cd288bf9bb9a6
+          src={`/src/images/${image}`}
+        />
+        <p>{title}</p>
+      
+      <div>
+        <div> {category}</div>
+        <span>${price}</span>
+      </div>
+      </Link>
+      <button onClick={addToCart}>Add to cart</button>
+
+      {/* <Link to={`/products/${_id}`}>
+        <img
           alt={name}
           src={`/images/${image}`}
         />
-        <p>{name}</p> */}
+        <p>{name}</p>
       </Link>
       <div>
-<<<<<<< HEAD
-        <div> {seller}{description}{quantity}{pluralize("item", quantity)} in stock </div>
+        <div> {seller}{description}{quantity}{pluralize("item", quantity)} </div>
         <span>${price}</span>
-=======
-        {/* <div> {seller}{description}{quantity}{pluralize("item", quantity)} </div>
-        <span>${price}</span> */}
->>>>>>> 54f38112d06673b9055cc7df974cd288bf9bb9a6
-      </div>
-      {/* <button onClick={addToCart}>Add to cart</button> */}
+      </div> */}
+      <button onClick={addToCart}>Add to cart</button>
+
     </div>
   );
 }

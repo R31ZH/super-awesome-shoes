@@ -4,13 +4,16 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
-// import shoppingLogo from './shoppingLogoResize.png'
+import ShoppingCart from "../Cart/index"
 
-<<<<<<< HEAD
+import shoppingLogo from './shoppingLogoResize.png'
+import { Link } from 'react-router-dom';
 
 
-=======
->>>>>>> 54f38112d06673b9055cc7df974cd288bf9bb9a6
+
+
+
+
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: '#fca311',
     textAlign: 'center',
@@ -28,36 +31,41 @@ function FormRow() {
     return (
         <React.Fragment>
             <Grid item xs={1}>
-                <Button >
-                    <Item>Airforce</Item>
-                </Button>
+
+
+                <Link to="/category/airforces">
+                    <Item>Airforces</Item>
+                </Link>
+
+               
             </Grid>
             <Grid item xs={1}>
-                <Button>
+                <Link to="/category/jordan">
                     <Item>Jordan</Item>
-                </Button>
+                </Link>
             </Grid>
             <Grid item xs={1}>
-                <Button>
+                <Link to="category/yeezy">
                     <Item>Yeezy</Item>
-                </Button>
+                </Link>
             </Grid>
             <Grid item xs={1}>
-                <Button>
+                <Link to="/category/designer">
                     <Item>Designer</Item>
-                </Button>
+                </Link>
             </Grid>
 
             <Grid item xs={1}>
-                <Button>
+                <Link to="/login">
                     <Item>Login</Item>
-                </Button>
+                </Link>
             </Grid>
             <Grid item xs={1}>
-                <Button>
+                <Link to="/signup">
                     <Item>SignUp</Item>
-                </Button>
+                </Link>
             </Grid>
+            <ShoppingCart />
         </React.Fragment>
     );
 }
